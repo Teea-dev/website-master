@@ -1,0 +1,148 @@
+/* // my part  */
+** {
+    margin: 0;
+    padding: 0;
+}
+
+.section1 {
+    background-color: #f6f6f6;
+    margin: 0;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-inline: 150px;
+    justify-content: center;
+}
+
+.section1 h1{
+    font-weight: 700;
+    font-size: 2.25rem;
+}
+.section2 {
+    background-color: #0D47A1;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 100px;
+    padding-top: 100px;
+    text-align: center;
+    align-items: center;
+    padding-inline: 200px;
+    justify-items: center;
+}
+
+.form1 input {
+    width: 300px !important;
+    padding: 15px 20px !important;
+    font-size: 12px;
+    padding-left: -50px;
+    border: none;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.input1 input {
+    width: 610px !important;
+    margin-inline: none;
+}
+
+.submit-btn {
+    background-color: #0065d0;
+    margin: 5px;
+    color: #fff;
+    border-radius: 10px;
+    width: 610px !important;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.submit-btn:hover{
+  box-shadow: none;
+  background-color: rgb(135, 167, 255);
+}
+
+.desktop-icon{
+  width: 90px;
+   
+}
+
+.section1-img{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.icon-div {
+  margin-bottom: 1rem;
+}
+.story{
+ margin: 0 10px;
+}
+
+@media (max-width: 962px) {
+  .section1 {
+    align-items: center;
+    justify-items: center;
+    padding-inline: 100px;
+  }
+  .section1-text{
+    text-align: center;
+  }
+  .section1-img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .section2 {
+    padding-inline: 100px;
+    text-align: center;
+  }
+  .icon-div {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 625px) {
+  .section1 {
+    padding-inline: 30px;
+  }
+  .section1-img img{
+    width: 400px !important;
+  }
+  .section2-input {
+    display: flex;
+    flex-direction: column;
+  }
+  .section2 {
+    padding-inline: 30px;
+    justify-content: center;
+    text-align: center;
+  }
+  .section2 input, .submit-btn {
+    width: 410px !important;
+  }
+  .story{
+    margin: 5px 3px;
+    padding: 6px 13px;
+  }
+}
+
+@media (max-width: 472px) {
+  .section1-img img{
+    width: 300px !important;
+  }
+  .section2 {
+    text-align: center;
+    padding-inline: 30px;
+  }
+  .section2 input, .submit-btn {
+    width: 310px !important;
+  }
+}
+@media (max-width:390px){
+body{
+  overflow-x: hidden;
+} 
+}
+

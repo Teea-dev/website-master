@@ -1,0 +1,9 @@
+@mixin disp-fl($justify-content, $align-items){
+    display: flex;
+    justify-content: $justify-content;
+    align-items: $justify-content;
+}
+
+.disp-fl{
+    @include disp-fl(none, none)
+}

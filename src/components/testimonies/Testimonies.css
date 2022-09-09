@@ -1,0 +1,117 @@
+.testimonies {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.testimonie-1 h1 {
+    position: relative;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 2.5rem;
+    line-height: 30px;
+    margin-bottom: 2rem;
+}
+
+.testimonie-1 h1::after {
+    content: '';    
+    position: absolute;
+    height: 5px;
+    left: 50%;
+    bottom: -15px;
+    width: 150px;
+    border-radius: 10px;
+    background: var(--color-primary);
+    transform: translateX(-50%);
+}
+
+.testimonie-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    padding: 1rem;
+    width: 15.5rem;
+    height: 16.5rem;
+    background: var(--colorwhite);
+    box-shadow: 0px 7.18089px 5px -3.59044px rgba(22, 34, 51, 0.08);
+    border-radius: 11.7153px;
+    margin-bottom: 4rem;
+}
+
+.testimonie-box h2 {
+    font-family: 'Montserrat';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 1.2rem;
+}
+
+.testimonie-box p {
+    font-family: 'Montserrat';
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.6rem;
+    height: 45%;
+}
+
+.rating-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.material-icons-round {
+    color: var(--color-light-grey);
+}
+
+
+.rating-container .clicked {
+    color: var(--color-clicked);
+}
+
+.line {
+    width: 195.65px;
+    height: 0px;
+    border: 0.897611px solid var(--color-light-grey);
+}
+
+.linethrough {
+    background-color: var(--color-dark);
+    width: 60%;
+    height: 0.5rem;
+    border-radius: 30px;
+    animation: grow 5s linear infinite;
+}
+
+@keyframes grow {
+    0% {
+        transform: scaleX(50%);
+    }
+}
+.mySwiper {
+    margin: 0 auto;
+    width: 49.6rem;
+}
+
+.swiperSlide {
+    width: max-content !important;
+    padding: 0 0.5rem;
+}
+
+@media screen and (max-width: 853px) {
+    .mySwiper {
+        margin: 0 auto;
+        width: 15.5rem;
+    }
+
+    .swiperSlide {
+        width: 15.5rem;
+        padding: 0;
+    }
+}

@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Poppins:wght@300;400;500;600&display=swap');
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-primary-light:#ceddf5;
+  --color-primary-variant: rgba(168, 202, 255, 1);
+  --color-primary:rgba(0, 102, 255, 1);
+  --color-primary-variant-2: rgba(13, 71, 161, 1);
+  --color-light: rgb(229, 229, 229);
+  --color-white: rgba(255, 255, 255, 1);
+  --color-dark: rgb(0, 10, 27);
+  --color-dark-2:rgba(13, 25, 48, 0.87);
+  --color-grey: rgba(0, 0, 0, 0.3);
+  --color-light-extra:  rgba(249, 249, 249, 1);
+  --color-clicked: rgb(250, 139, 13);
+  --color-light-grey: rgb(230, 232, 235);
+  --color-overlay: rgb(168, 202, 255);
+}
+
+h1,h2,h3,h4,h5,h6, ul {
+  font-family: 'Montserrat', sans-serif;
+}
+
+p, span, div, a {
+  font-family: 'Poppins', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
+ul {
+  list-style-type: none;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 900px) {
+    body {
+        font-size: 1rem;
+    }
+}
+
+/* The following styling should be moved to a separate file when the folder architecture is resolved */
+/* component styling */
+.dark-layer {
+  width: inherit;
+  height: auto;
+  position: absolute;
+  z-index: 0;
+  padding: 1rem;
+  background: -webkit-gradient(linear, to-bottom, from(transparent), to(black));
+  background: linear-gradient(to bottom, transparent, black);
+}

@@ -1,0 +1,25 @@
+.dark-layer {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 0;
+  background: -webkit-gradient(linear, to-bottom, from(transparent), to(black));
+  background: linear-gradient(to-bottom, transparent, black);
+}
+
+.disp-fl {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: none;
+      -ms-flex-pack: none;
+          justify-content: none;
+  -webkit-box-align: none;
+      -ms-flex-align: none;
+          align-items: none;
+}
+
+body {
+  background: red !important;
+}
+/*# sourceMappingURL=index.css.map */

@@ -1,0 +1,40 @@
+.appstore-container {
+    background: black;
+    width: 160px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    border-radius: 10px;
+    color: white;
+}
+
+.appstore-icon {
+    width: 25%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.appstore-icon img {
+    width: 60%;
+}
+
+.appstore-text {
+    width: 70%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.appstore-text h3 {
+    font-size: 0.8rem;
+    margin-bottom: 0;
+}
+
+.appstore-text h2 {
+    font-size: 1.1rem;
+    margin-bottom: 0;
+}

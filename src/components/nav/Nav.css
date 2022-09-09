@@ -1,0 +1,225 @@
+nav {
+    background: var(--color-primary-light);
+    width: 100vw;
+    z-index: 1000;
+}
+.container-width {
+    display: grid;
+    grid-template-columns: 10% 90%;
+    place-content: center;
+    width: 80vw;
+    height: 71.2px;
+    background: var(--color-primary-light);
+    color: var(--color-dark-2);
+    font-size: 1rem;
+    font-weight: 700;
+    padding-inline: 100px;
+    margin: 0 auto;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.toggle-button{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    right: 1rem;
+}
+.toggle-button .bar{
+    height: 3px;
+    width: 100%;
+    background-color: var(--color-primary);
+    border-radius: 10px;
+}
+.small-menu {
+    display: flex;
+    justify-content: space-around;
+}
+
+.nav-links {
+    width: 70%;
+}
+
+.nav-links ul {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-end;
+    width: 100%;
+    height: 100%;
+}
+
+.nav-links ul li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    padding: 1.5rem;
+    padding-inline: .9rem;
+}
+
+.nav-links ul li a {
+    text-decoration: none;
+    color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600 !important;
+}
+.nav-links ul li a:hover {
+    color: var(--color-primary) !important;
+}
+
+.cta {
+   width: 20%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.login {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 7px;
+}
+
+.login span{
+    margin-right: 0.7rem;
+}
+
+.register {
+    /* padding: 5px 30px; */
+    cursor: pointer;
+}
+
+/* .register-btn {
+    font-size: 0.8rem;
+    background: var(--color-primary);
+    width: 5.5rem;
+    height: 2rem;       
+    color: var(--color-white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 4px;
+    padding: 0;
+    
+} */
+.btn-register{
+    background-color: var(--color-primary);
+    color: var(--color-white);
+}
+.register:active {
+    transform: scale(0.98);
+}
+.register a{
+    color: var(--color-white);
+    text-align: none;
+}
+.btn-register :hover {
+    color: var(--color-primary);
+    background: var(--color-white);
+    box-shadow: 3px 5px 12px 2px rgba(0, 0, 0, 0.05);
+    transition: 300ms all ease;
+}
+
+.menu-open {
+    display: none;
+}
+
+@media screen and (max-width: 1200px) {
+    .container-width {
+        width: 90vw;
+        padding-inline: 0%;
+    }
+
+    .small-menu {
+        display: grid;
+        grid-template-columns: 70% 30%;
+    }
+
+    .nav-links ul li {
+        padding: 0.5rem;
+    }
+
+    .cta {
+        width: 100%;
+    }
+    
+    .nav-links {
+        width: 100%;
+    }
+}
+
+@media screen and (max-width: 890px) {
+    .container-width {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 2rem;
+    }
+     .toggle-button{
+        display: flex;
+     }
+     
+    .menu-open {
+        display: block;
+        font-size: 3rem;
+        color: var(--color-primary);
+    }
+    
+    .small-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 40vw;
+        height: 100vh;
+        position: fixed;
+        top: 0;
+        right: -100%;
+        background: var(--color-white);
+        box-shadow: 0 0 3rem rgb(0,0,0,0.2);
+        transition: 500ms all ease;
+        z-index: 10;
+    }
+
+    .active {
+        display: flex;
+        right: 0;
+    }
+
+    .nav-links ul {
+        display: flex;
+        flex-direction: column;
+    }
+    .nav-links ul li {
+        font-size: 1.5rem;
+        margin-bottom: 0.7rem;
+    }
+
+    .cta {
+        flex-direction: column;
+        gap: 2rem;
+        font-size: 1.2rem;
+        margin-bottom: 5rem;
+    }
+
+    .cta .register {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .logo {
+        padding-left: 1rem;
+    }   
+}
