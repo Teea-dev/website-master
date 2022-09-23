@@ -27,14 +27,7 @@ const Header = () => {
                     <p>Axio splatters delivery at your doorstep by uniting you with people traveling to the same destination as your goods.</p>
                 </div>
                 <div className="header-container-1-2">
-                    <div className="download-icons">
-                        <div>
-                            <a className="download-section-icon" href="/"><Playstore /></a>
-                        </div>
-                        <div>
-                            <a className="download-section-icon" href="/"><Appstore /></a>
-                        </div>
-                    </div>
+                    
                     <div className="subscribe">
                         <div>
                             <p>Join the waitlist</p>

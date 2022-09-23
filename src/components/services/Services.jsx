@@ -1,10 +1,12 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import "./Services.css";
 import macbook from "../../assets/images/Macbook.png";
 import Playstore from "../download-icons/Playstore";
 import Appstore from "../download-icons/Appstore";
 import AxioCircle from "./Axio-Circle";
 import { BsFillCaretDownFill, BsFillCaretUpFill } from "react-icons/bs";
+import { gsap,Power4 } from "gsap";
+import {useIntersection} from 'react-use';
 
 const Services = () => {
   const [isToggled, setIsToggled] = useState(false);
@@ -18,6 +20,69 @@ const Services = () => {
   const openFeatureToggler2 = () => {
     setIsToggled2(!isToggled2);
   };
+
+  const circleRef= useRef(null);
+  const detailRef= useRef(null);
+  const withRef= useRef(null);
+//ANIMATION FOR THE FEATURE DETAIL
+
+  const intersect = useIntersection (detailRef,{
+    root: null,
+    rootMargin: '0px',
+    threshold:0.5
+  });
+
+  const detail = () =>{
+    gsap.to(detailRef.current, {
+      duration: 1,
+      opacity: 1,
+      y: -30,
+      delay: .2,
+      ease: Power4.easeOut,
+      stagger: {
+        amount: 0.3,
+      },
+    });
+  }
+
+
+    const detailOut = () => {
+    gsap.to(detailRef.current, {
+      duration: 1,
+      opacity: 0,
+      y: -20,
+      ease: Power4.easeOut,
+    });
+  };
+
+  intersect && intersect.intersectionRatio < 0.5
+    ? detailOut(".detail")
+    : detail(".detail");
+//ANIMATION FOR THE CIRCLE 
+  const intersection = useIntersection (circleRef,{
+    root: null,
+    rootMargin: '0px',
+    threshold: 0.5
+  });
+
+  const circle = () =>{
+    gsap.fromTo (circleRef.current, {opacity:0, scale:0, rotation:720,}, {duration:1, delay:1, opacity:1, scale:1, rotation:0,})
+  }
+
+
+    const circleOut = () => {
+    // gsap.to(aboutRef.current, {
+    //   duration: 1,
+    //   opacity: 0,
+    //   y: -20,
+    //   ease: Power4.easeOut,
+    // });
+  };
+
+  intersection && intersection.intersectionRatio < 0.5
+    ? circleOut(".circle")
+    : circle(".circle");
+
 
   return (
     <div className="services mt-5" id="services">
@@ -60,7 +125,7 @@ const Services = () => {
         </div>
       </div>
       <div className="service-3" id="features">
-        <div className="features-details">
+        <div ref={detailRef} className="features-details detail">
           <h1>
             All the features <br /> to make your life easy
           </h1>
@@ -74,13 +139,13 @@ const Services = () => {
             <li>Axio is creating more features to aid you live at ease</li>
           </ul>
         </div>
-        <div className="axio-circle">
+        <div  ref={circleRef} className="axio-circle circle">
           <AxioCircle />
         </div>
       </div>
 
       <div className="service-4">
-        <div className="axio-personality-texts">
+        <div  ref={withRef} className="axio-personality-texts">
           <h1>
             With AXIO <br /> you can be sure <br /> of something
           </h1>
