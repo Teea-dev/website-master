@@ -120,7 +120,7 @@ const Waitlist = () => {
           <div className="">
             <h1 className="">
               Get connected with people traveling to the same destination as
-              your goods.
+              your gods.
             </h1>
           </div>
           <div className="">
