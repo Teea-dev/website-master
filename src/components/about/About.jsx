@@ -4,7 +4,7 @@ import deliveryMan3 from "../../assets/images/Delivery003 1.png";
 import {FaFacebookF, FaTwitter, FaInstagram} from 'react-icons/fa';
 // import {useIntersection} from 'react-use';
 // import {gsap, Power4,} from 'gsap';
-import Fade from 'react-reveal/Fade';
+
 const About = () => {
 //   const aboutRef = useRef(null);
 //   const imageRef =useRef(null);
@@ -117,7 +117,7 @@ const About = () => {
           </div>
         </div>
 
-            <Fade top>
+            
         <div className=" about-container-2 " >
           <div  className="about-container-section-1 fadeIn">
 
@@ -174,7 +174,7 @@ const About = () => {
             </div>
           </div>
         </div>
-        </Fade>
+       
       </div>
     );
 }

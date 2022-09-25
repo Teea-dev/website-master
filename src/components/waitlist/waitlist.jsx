@@ -7,6 +7,7 @@ import logo from "../../assets/images/Axio.svg";
 import desktop from "../../assets/images/AXIO 2.png";
 import Footer from "../../components/footer/Footer";
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 import { Link } from "react-router-dom";
 
 const Waitlist = () => {
@@ -22,32 +23,43 @@ const Waitlist = () => {
    function handleSubmit(e) {
     e.preventDefault();
 
-    const data = {
-      firstName:firstname,
-      lastName:lastname,
+
+    axios.post("https://axio-all-04.herokuapp.com/api/await-lists", {
+      firstName: firstname,
+      lastName: lastname,
       email: email,
-    };
-    fetch("https://axio-all-04-herokuapp.co/api/await-lists", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+    }).then( (response)=>{
+      console.log(response);
+    }).catch((error)=>{
 
-      body: JSON.stringify(data),
-    })
-      .then((data) => {
-        if(!data.ok){
+      console.log(error);
+    });
+    // const data = {
+    //   firstName:firstname,
+    //   lastName:lastname,
+    //   email: email,
+    // };
+    // fetch("https://axio-all-04.herokuapp.com/api/await-lists", {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
 
-          throw Error(data.status);
-        }
-        return data.json();
-      })
-      .then((response)=>
-      console.log(response))
-      .catch((err) => {
-        console.log("error");
-        console.log(err);
-      });
+    //   body: JSON.stringify(data),
+    // })
+    //   .then((data) => {
+    //     if(!data.ok){
+
+    //       throw Error(data.status);
+    //     }
+    //     return data.json();
+    //   })
+    //   .then((response)=>
+    //   console.log(response))
+    //   .catch((err) => {
+    //     console.log("error");
+    //     console.log(err);
+    //   });
   }
   // const [state, handleSubmit] = useForm("mjvzbnqz");
   // if (state.succeeded) {
